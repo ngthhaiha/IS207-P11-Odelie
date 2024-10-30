@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* thanh menu */
+.navBar {
+  width: 1600px;
+  height: 60px;
+  position: absolute;
+  top: 17px;
+  left: 0px;
+  overflow: hidden;
+  border-bottom: 0.1px solid #d3d3d3; /* đặt độ dày border-bottom là 0.5px */
+}
+
+
+/* position chữ bst mới */
+.newArrival {
+  width: 81px;
+  height: 46px;
+  position: absolute;
+  top: 18px;
+  left: 282px;
+  overflow: hidden;
+  
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: bold; /* Đậm hơn */
+  font-size: 16px;
+}
+
+
+/* Vị trí chữ Nữ */
+.Female {
+  width: 32px;
+  height: 46px;
+  position: absolute;
+  top: 18px; /* điều chỉnh vị trí từ trên */
+  left: 402px; /* canh lề chữ "Nữ" */
+  overflow: hidden;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: bolder; /* độ đậm chữ mạnh hơn */
+  font-size: 16px; /* thay đổi kích thước chữ theo mẫu */
+}
+
+/* Nam */
+.Male {
+  width: 46px;
+  height: 46px;
+  opacity: 1;
+  position: absolute;
+  top: 18px; /* điều chỉnh vị trí từ trên */
+  left: 467px;
+  overflow: hidden;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: 800; /* độ đậm chữ mạnh hơn */
+  font-size: 16px; /* thay đổi kích thước chữ */
+}
+
+/* Trẻ em */
+.Children {
+  width: 112px;
+  height: 46px;
+  opacity: 1;
+  position: absolute;
+  top: 18px; /* điều chỉnh vị trí từ trên */
+  left: 542px;
+  overflow: hidden;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: 800; /* độ đậm chữ mạnh hơn */
+  font-size: 16px; /* thay đổi kích thước chữ */
+}
+
+/* Phụ kiện */
+.Accessories {
+  width: 118px;
+  height: 46px;
+  opacity: 1;
+  position: absolute;
+  top: 18px; /* điều chỉnh vị trí từ trên */
+  left: 647px;
+  overflow: hidden;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: 800; /* độ đậm chữ mạnh hơn */
+  font-size: 16px; /* thay đổi kích thước chữ */
+}
+
+/* Giảm giá */
+.Sales {
+  width: 129px;
+  height: 46px;
+  opacity: 1;
+  position: absolute;
+  top: 18px; /* điều chỉnh vị trí từ trên */
+  left: 780px;
+  overflow: hidden;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter, sans-serif;
+  font-weight: 800; /* độ đậm chữ mạnh hơn */
+  font-size: 16px; /* thay đổi kích thước chữ */
+}
+
+
+
+.logo {
+  width: 219px;
+  height: 55px;
+  background: url("../../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.icon-Search {
+  width: 20px;
+  height: 20px;
+  background: url("../../images/icon/icon-search.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 26px;
+  left: 1330px;
+  overflow: hidden;
+}
+
+.icon-WishList {
+  width: 24px;
+  height: 20px;
+  background: url("../../images/icon/icon-wishlist.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 26px;
+  left: 1380px;
+  overflow: hidden;
+}
+
+
+.icon-UserInformation {
+  width: 20px;
+  height: 20px;
+  background: url("../../images/icon/icon-user.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 26px;
+  left: 1430px;
+  overflow: hidden;
+}
+
+.icon-cart {
+  width: 24px;
+  height: 24px;
+  background: url("../../images/icon/icon-cart.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 24px;
+  left: 1480px;
+  overflow: hidden;
+}
