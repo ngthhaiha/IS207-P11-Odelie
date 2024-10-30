@@ -1,0 +1,14 @@
+WEB
+- tính năng: 
+0. đăng nhập đăng ký, user-profile
+1. quản lý sản phẩm: trả hàng hoàn tiền, thanh toán, 
+2. quản lý kho:
+3. quản lý đơn hàng: detail-order, detail-product, 
+3. coupon giảm giá
+4. thông báo event (trang chủ, gmail)
+5. list sản phẩm best seller, flash sale, đã xem, tra cứu hành trình đơn hàng, new arrival
+
+
+user: xem sp, xem chi tiết sp, quản lý account, order history, quản lý đơn hàng, trạng thái đơn hàng (pending, shipping, delivered), flash sale, đánh giá phản hồi
+
+admin: thêm xóa sửa thống kê, giảm giá event, quản lý kho khách hàng, xử lý đơn hàng
