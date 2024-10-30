@@ -5,6 +5,11 @@ body {
   font-size: 14px;
 }
 
+.phone:focus,
+.password:focus{
+  border: 0.01px solid gray;
+}
+
 /* vị trí form đăng nhập */
 .login-form {
   width: 628px;
@@ -72,6 +77,7 @@ body {
   display: flex;
   align-items: center;
   border: none;
+  outline: none;
 }
 
 /* mật khẩu */
@@ -91,6 +97,7 @@ body {
   font-weight: regular;
   font-size: 13px;
   border: none;
+  outline: none;
 }
 
 .password-toggle {
