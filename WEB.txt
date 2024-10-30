@@ -9,6 +9,7 @@ WEB
 5. list sản phẩm best seller, flash sale, đã xem, tra cứu hành trình đơn hàng, new arrival
 
 
-user: xem sp, xem chi tiết sp, quản lý account, order history, quản lý đơn hàng, trạng thái đơn hàng (pending, shipping, delivered), flash sale, đánh giá phản hồi
+user: xem sp, xem chi tiết sp, quản lý account, order history, trạng thái đơn hàng (pending, shipping, delivered), flash sale, đánh giá phản hồi, best seller, 
+sản phẩm đã xem
 
-admin: thêm xóa sửa thống kê, giảm giá event, quản lý kho khách hàng, xử lý đơn hàng
+admin: thêm xóa sửa thống kê, giảm giá event, quản lý kho khách hàng, xử lý đơn hàng, xử lý đánh giá phản hồi
