@@ -1,5 +1,7 @@
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 body {
   font-size: 14px;
@@ -13,13 +15,13 @@ button {
 
 /* thanh menu */
 .navBar {
-  width: 1600px;
-  height: 60px;
+  width: 100vw;
+  height: 57px;
   position: absolute;
   top: 17px;
   left: 0px;
   overflow: hidden;
-  border-bottom: 0.1px solid #d3d3d3; /* đặt độ dày border-bottom là 0.5px */
+  border-bottom: 0.1px solid #d3d3d3;
 }
 
 
@@ -28,13 +30,13 @@ button {
   width: 81px;
   height: 46px;
   position: absolute;
-  top: 18px;
+  top: 16px;
   left: 282px;
   overflow: hidden;
   
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: bold; /* Đậm hơn */
+  font-weight: bold;
   font-size: 16px;
 }
 
@@ -44,14 +46,14 @@ button {
   width: 32px;
   height: 46px;
   position: absolute;
-  top: 18px; /* điều chỉnh vị trí từ trên */
-  left: 402px; /* canh lề chữ "Nữ" */
+  top: 16px; 
+  left: 402px; 
   overflow: hidden;
 
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: bolder; /* độ đậm chữ mạnh hơn */
-  font-size: 16px; /* thay đổi kích thước chữ theo mẫu */
+  font-weight: bolder; 
+  font-size: 16px; 
 }
 
 /* Nam */
@@ -60,14 +62,14 @@ button {
   height: 46px;
   opacity: 1;
   position: absolute;
-  top: 18px; /* điều chỉnh vị trí từ trên */
+  top: 16px; 
   left: 467px;
   overflow: hidden;
 
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: 800; /* độ đậm chữ mạnh hơn */
-  font-size: 16px; /* thay đổi kích thước chữ */
+  font-weight: 800;
+  font-size: 16px; 
 }
 
 /* Trẻ em */
@@ -76,14 +78,14 @@ button {
   height: 46px;
   opacity: 1;
   position: absolute;
-  top: 18px; /* điều chỉnh vị trí từ trên */
+  top: 16px; 
   left: 542px;
   overflow: hidden;
 
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: 800; /* độ đậm chữ mạnh hơn */
-  font-size: 16px; /* thay đổi kích thước chữ */
+  font-weight: 800; 
+  font-size: 16px;
 }
 
 /* Phụ kiện */
@@ -92,14 +94,14 @@ button {
   height: 46px;
   opacity: 1;
   position: absolute;
-  top: 18px; /* điều chỉnh vị trí từ trên */
+  top: 16px; 
   left: 647px;
   overflow: hidden;
 
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: 800; /* độ đậm chữ mạnh hơn */
-  font-size: 16px; /* thay đổi kích thước chữ */
+  font-weight: 800; 
+  font-size: 16px;
 }
 
 /* Giảm giá */
@@ -108,14 +110,14 @@ button {
   height: 46px;
   opacity: 1;
   position: absolute;
-  top: 18px; /* điều chỉnh vị trí từ trên */
+  top: 16px; 
   left: 780px;
   overflow: hidden;
 
   color: rgba(0, 0, 0, 1);
   font-family: Inter, sans-serif;
-  font-weight: 800; /* độ đậm chữ mạnh hơn */
-  font-size: 16px; /* thay đổi kích thước chữ */
+  font-weight: 800; 
+  font-size: 16px; 
 }
 
 
@@ -149,7 +151,7 @@ button {
 }
 
 .icon-WishList {
-  width: 24px;
+  width: 25px;
   height: 20px;
   background: url("../../images/icon/icon-wishlist.png");
   background-repeat: no-repeat;
@@ -164,8 +166,8 @@ button {
 
 
 .icon-UserInformation {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 21px;
   background: url("../../images/icon/icon-user.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -178,7 +180,7 @@ button {
 }
 
 .icon-cart {
-  width: 24px;
+  width: 20px;
   height: 24px;
   background: url("../../images/icon/icon-cart.png");
   background-repeat: no-repeat;
