@@ -48,7 +48,7 @@ body {
   color: rgba(117, 117, 117, 1);
   font-family: Inter;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 13px;
   text-align: left;
   padding-left: 11px;
   line-height: 38px;
@@ -83,7 +83,7 @@ body {
   color: rgba(117, 117, 117, 1);
   font-family: Inter;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
   line-height: 38px;
   padding-left: 11px;
@@ -131,8 +131,8 @@ label {
   font-weight: 400;
   font-size: 13px;
   visibility: hidden;
-  background-color: white; /* Nền trắng cho label */
-  padding: 0 5px; /* Tạo khoảng trắng xung quanh label */
+  background-color: white; 
+  padding: 0 5px; 
 }
 
 
