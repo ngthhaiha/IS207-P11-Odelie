@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0;
+}
+
+.form-register {
+  width: 851px;
+  height: 634px;
+  background: url("../images/v73_513.png") no-repeat center center / cover;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.dktk {
+  width: 356px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 30px;
+  left: 242px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+}
+
+.username,
+.fullname,
+.email,
+.phone,
+.password,
+.confirm-password {
+  width: 849px;
+  height: 38px;
+  left: 1px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  color: rgba(117, 117, 117, 1);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  padding-left: 11px;
+  line-height: 38px;
+  border: 0.1px solid #d3d3d3;
+  outline: none;
+}
+
+.date-of-birth {
+  width: 851px;
+  height: 64px;
+  background: url("../images/v73_518.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 214px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.birth-day,
+.birth-month,
+.birth-year {
+  width: 275px;
+  height: 38px;
+  top: 1px;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+  color: rgba(117, 117, 117, 1);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  line-height: 38px;
+  padding-left: 11px;
+  border: 0.1px solid #d3d3d3;
+  outline: none;
+}
+
+.register-button {
+  width: 851px;
+  height: 60px;
+  background: rgba(33, 33, 33, 1);
+  opacity: 1;
+  position: absolute;
+  top: 561px;
+  left: 1px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: 700; 
+  font-size: 14px;
+  text-align: center;
+  line-height: 60px; 
+}
+
+.username:focus,
+.fullname:focus,
+.email:focus,
+.phone:focus,
+.password:focus,
+.confirm-password:focus {
+  border: 0.01px solid gray;
+}
+
+.input-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  color: gray;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 13px;
+  visibility: hidden;
+  background-color: white; 
+  padding: 0 5px; 
+}
+
+
+/* hiệu ứng placehoder biến thành label */
+input[type="text"]:not(:placeholder-shown) + label {
+  left: 12px;
+  font-size: 15px;
+  color: rgba(100, 100, 100, 1);
+  visibility: visible;
+  transition: all 0.2s ease;
+}
+
+input[type="email"]:not(:placeholder-shown) + label {
+  left: 12px;
+  font-size: 15px;
+  color: rgba(100, 100, 100, 1);
+  visibility: visible;
+  transition: all 0.2s ease;
+} 
+
+input[type="tel"]:not(:placeholder-shown) + label {
+  left: 12px;
+  font-size: 15px;
+  color: rgba(100, 100, 100, 1);
+  visibility: visible;
+  transition: all 0.2s ease;
+} 
+
+input[type="password"]:not(:placeholder-shown) + label {
+  left: 12px;
+  font-size: 15px;
+  color: rgba(100, 100, 100, 1);
+  visibility: visible;
+  transition: all 0.2s ease;
+} 
+
+.label-username{
+  top: 80px;
+}
+
+.label-fullname{
+  top: 141px;
+}
+
+.label-email{
+  top: 269px;
+}
+
+.label-phone{
+  top: 332px;
+}
+
+.label-password{
+  top: 396px;
+}
+
+.label-cfpassword{
+  top: 462px;
+}
+
+
+/* căn chỉnh */
+.username {
+  top: 90px;
+}
+
+.fullname {
+  top: 151px;
+}
+
+.email {
+  top: 279px;
+}
+
+.phone {
+  top: 342px;
+}
+
+.password {
+  top: 406px;
+}
+
+.confirm-password {
+  top: 472px;
+}
+
+.birth-day {
+  left: 0px;
+}
+
+.birth-month {
+  left: 288px;
+}
+
+.birth-year {
+  left: 576px;
+}
+

@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+
+.phone:focus,
+.password:focus{
+  border: 0.01px solid gray;
+}
+
+/* vị trí form đăng nhập */
+.login-form {
+  width: 628px;
+  height: 466px;
+  background: rgba(245,245,245,1);
+  padding: 50px 0px;
+  opacity: 1;
+  position: absolute;
+  top: 200px;
+  left: 517px;
+  overflow: hidden;
+}
+
+
+/* đăng nhập */
+.v6_634 {
+  width: 425px;
+  height: 56px;
+  background: rgb(245, 245, 245) no-repeat center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 35px;
+  left: 102px;
+  overflow: hidden;
+  color: rgba(30,30,30,1);
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-info-login {
+  width: 426px;
+  height: 315px;
+  background: rgb(245, 245, 245);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 106px;
+  left: 101px;
+  overflow: hidden;
+}
+
+
+/* số điện thoại/email */
+.phone {
+  width: 426px;
+  height: 38px;
+  background: rgba(255, 255, 255, 1)  no-repeat center center;
+  background-size: cover;
+  padding: 9px 12px;
+  position: relative;
+  overflow: hidden;
+  color: rgba(68, 68, 68, 1);
+  font-family: Inter;
+  font-weight: regular;
+  font-size: 13px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+/* mật khẩu */
+.password {
+  width: 426px;
+  height: 38px;
+  background: rgba(255, 255, 255, 1);
+  top: 20px;
+  padding: 9px 12px;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: rgba(68, 68, 68, 1);
+  font-family: Inter;
+  font-weight: regular;
+  font-size: 13px;
+  border: none;
+  outline: none;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgb(146, 145, 145);
+  cursor: pointer;
+}
+
+.password .password-input {
+  flex: 1;
+  color: rgba(68, 68, 68, 1);
+  text-align: left;
+}
+
+.password .password-icon {
+  width: 21px;
+  height: 12px;
+  background: rgba(30, 30, 30, 0.74);
+  margin-left: auto;
+}
+
+
+/* lưu đăng nhập */
+.remember-me {
+  width: 426px;
+  height: 30px;
+  background-repeat: no-repeat;
+  margin: 5px;
+  opacity: 1;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* vị trí chữ lưu đăng nhập */
+.rmb-me-position {
+  width: 100px;
+  color: rgba(30,30,30,1);
+  position: absolute;
+  top: 5px;
+  left: 26px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+
+/* checkbox lưu đn */
+.rmb-me-checkbox {
+  width: 17px;
+  height: 17px;
+  background: rgba(255, 254, 254);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(30,30,30,1);
+  overflow: hidden;
+  appearance: none; /* Xóa giao diện mặc định của checkbox */
+}
+
+
+.rmb-me-checkbox:checked {
+  background: black; /* Nền đen khi được tick */
+}
+
+.rmb-me-checkbox:checked::before {
+  content: "✔"; /* Dấu tick */
+  display: block;
+  color: white; /* Màu trắng cho dấu tick */
+  font-size: 13px;
+  text-align: center;
+  line-height: 13px; /* Căn giữa dấu tick theo chiều dọc */
+}
+
+/* Vị trí và định dạng cho liên kết quên mật khẩu */
+.forgot-password {
+  width: 120px; /* Chiều rộng của khu vực chứa */
+  height: 20px; /* Chiều cao của khu vực chứa */
+  background: url("../images/v6_680.png"); /* Hình nền */
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-position: center center; /* Căn giữa hình nền */
+  background-size: cover; /* Kích thước hình nền phủ toàn bộ khu vực */
+  opacity: 1; /* Độ mờ */
+  position: absolute; /* Vị trí tuyệt đối */
+  top: 5px; /* Khoảng cách từ trên xuống */
+  left: 310px; /* Khoảng cách từ bên trái */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  border: none;
+  color: rgba(23, 22, 22, 1); /* Màu chữ */
+  font-family: Inter; /* Font chữ */
+  font-weight: Regular; /* Độ dày chữ */
+  font-size: 13px; /* Kích thước chữ */
+  text-align: left; /* Căn chỉnh chữ bên phải */
+  line-height: 20px; /* Để căn chỉnh chiều cao của chữ */
+  text-decoration: underline;
+}
+
+
+/* button đăng nhập */
+.v6_684 {
+  width: 426px;
+  height: 60px;
+  background: rgba(30,30,30,1);
+  padding: 22px 167px;
+  opacity: 1;
+  position: absolute;
+  top: 143px;
+  left: 0px;
+  overflow: hidden;
+}
+
+/* hiện chữ đăng nhập */
+.v6_685 {
+  width: 113px;
+  color: rgba(255,249,249,0.9900000095367432);
+  position: absolute;
+  top: 22px;
+  left: 157px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 13px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+
+/* vị trí chưa có tài khoản */
+.v11_11 {
+  width: 426px;
+  height: 50px;
+  background: rgb(245, 245, 245);
+  opacity: 1;
+  position: absolute;
+  top: 219px;
+  left: 0px;
+  overflow: hidden;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 14px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.register-btn {
+  width: 426px;
+  height: 60px;
+  background: rgba(255,255,255,1);
+  padding: 22px 167px;
+  opacity: 1;
+  position: absolute;
+  top: 255px;
+  left: 0px;
+  overflow: hidden;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

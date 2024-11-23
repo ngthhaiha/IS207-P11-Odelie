@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  margin: 0;
+}
+.product-quick-view {
+  width: 982px;
+  height: 500px;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border: 0.01px solid rgb(216, 216, 216);
+}
+
+.add-to-cart {
+  width: 300px;
+  height: 45px;
+  background: rgba(33, 33, 33, 1);
+  opacity: 1;
+  position: absolute;
+  top: 380px;
+  left: 575px;
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 13px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.product-color {
+  width: 71px;
+  color: rgba(33,33,33,1);
+  position: absolute;
+  top: 159px;
+  left: 500px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.product-size {
+  width: 92px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 190px;
+  left: 500px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+.size-guide {
+  width: 72px;
+  color: rgba(33,33,33,1);
+  position: absolute;
+  top: 190px;
+  left: 870px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+  background: none;
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-position: center center; /* Căn giữa hình nền */
+  background-size: cover; /* Kích thước hình nền phủ toàn bộ khu vực */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  border: none;
+  line-height: 20px; /* Để căn chỉnh chiều cao của chữ */
+  text-decoration: underline;
+}
+
+.size-details {
+  width: 435px;
+  height: 85px;
+  background: url("../images/v73_21950.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 235px;
+  left: 502px;
+  overflow: hidden;
+
+}
+
+.sizeXS,
+.sizeS,
+.sizeM,
+.sizeL,
+.sizeXL {
+  width: 85px;
+  height: 85px;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(33,33,33,1);
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 12px;
+  text-align: center;
+  border: 0.01px solid rgb(216, 216, 216);
+}
+
+
+
+.sizeS {
+  left: 89px;
+}
+
+.sizeM {
+  left: 176px;
+}
+
+.sizeL {
+  left: 263px;
+}
+
+.sizeXL {
+  left: 350px;
+}
+
+.sizeXS {
+  left: 2px;
+}
+
+
+.product-name {
+  width: 647px;
+  color: rgba(33,33,33,1);
+  position: absolute;
+  top: 65px;
+  left: 395px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 19px;
+  opacity: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-price {
+  width: 109px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 91px;
+  left: 656px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 17px;
+  opacity: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-details {
+  width: 120px;
+  color: rgba(33,33,33,1);
+  background: none;
+  position: absolute;
+  top: 437px;
+  left: 666px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-position: center center; /* Căn giữa hình nền */
+  background-size: cover; /* Kích thước hình nền phủ toàn bộ khu vực */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  border: none;
+  line-height: 20px; /* Để căn chỉnh chiều cao của chữ */
+  text-decoration: underline;
+}
