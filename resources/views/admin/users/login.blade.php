@@ -3,53 +3,32 @@
 
 <head>
   @include('admin.users.head')
+
 </head>
 
-<body class="hold-transition login-page">
-  <div class="login-box">
-    <div class="login-logo">
-      <a href="#"><b>Admin</b></a>
-    </div>
-    <!-- /.login-logo -->
-    <div class="card">
-      <div class="card-body login-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+<body>
+  <div class="v11_16">  
+    <div class="login-form">
+      <div class="input-info-login">
+        <div class="v6_634">ĐĂNG NHẬP</div>
         @include('admin.users.alert')
         <form action="{{ route('admin.users.login.store') }}" method="post">
           @csrf
-          <div class="input-group mb-3">
-            <input type="email" name="email" class="form-control" placeholder="Email">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
+            <input type="email" name="email" class="email" placeholder="Số điện thoại/Email" required autocomplete="on">
+            <input type="password" name="password" class="password" placeholder="Mật khẩu" required>
+          <div class="remember-me">
+            <div class="rmb-me-position">Lưu đăng nhập</div>
+            <input type="checkbox" class="rmb-me-checkbox" >
+            <button class="rmb-me-position forgot-password">Quên mật khẩu?</button>
           </div>
-          <div class="input-group mb-3">
-            <input type="password" name="password" class="form-control" placeholder="Password">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">Remember Me</label>
-              </div>
-            </div>
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-            </div>
-          </div>
+          <button type="submit" class="v6_684"><span class="v6_685">ĐĂNG NHẬP</span></button>
         </form>
-
+        <div class="v11_11">CHƯA CÓ TÀI KHOẢN?</div>
+        <a href="{{ route('admin.users.register') }}" class="register-btn">ĐĂNG KÝ</a>
       </div>
     </div>
   </div>
-  <!-- /.login-box -->
+</div>
   @include('admin.users.footer')
 </body>
 

@@ -1,11 +1,17 @@
 * {
   box-sizing: border-box;
 }
-body {
-  font-size: 14px;
+body, html {
+  height: 100%; 
+  margin: 0; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #f0f0f0;
+  font-size: 18px;
 }
 
-.phone:focus,
+.email:focus,
 .password:focus{
   border: 0.01px solid gray;
 }
@@ -13,14 +19,15 @@ body {
 /* vị trí form đăng nhập */
 .login-form {
   width: 628px;
-  height: 466px;
+  /* height:630px; */
   background: rgba(245,245,245,1);
   padding: 50px 0px;
   opacity: 1;
   position: absolute;
   top: 200px;
-  left: 517px;
+  left: 717px;
   overflow: hidden;
+  
 }
 
 
@@ -31,9 +38,8 @@ body {
   background: rgb(245, 245, 245) no-repeat center center;
   background-size: cover;
   opacity: 1;
-  position: absolute;
-  top: 35px;
-  left: 102px;
+  position: relative;
+  top: 0px;
   overflow: hidden;
   color: rgba(30,30,30,1);
   font-family: Inter;
@@ -41,38 +47,38 @@ body {
   font-size: 30px;
   text-align: center;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
 .input-info-login {
   width: 426px;
-  height: 315px;
-  background: rgb(245, 245, 245);
+  height: 525px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
-  position: absolute;
-  top: 106px;
+  position: relative;
+  top: 0px;
   left: 101px;
   overflow: hidden;
 }
 
 
 /* số điện thoại/email */
-.phone {
+.email {
   width: 426px;
-  height: 38px;
+  height: 48px;
   background: rgba(255, 255, 255, 1)  no-repeat center center;
   background-size: cover;
   padding: 9px 12px;
+  top: 10px;
   position: relative;
   overflow: hidden;
   color: rgba(68, 68, 68, 1);
   font-family: Inter;
   font-weight: regular;
-  font-size: 13px;
+  font-size: 17px;
   text-align: left;
   display: flex;
   align-items: center;
@@ -83,9 +89,9 @@ body {
 /* mật khẩu */
 .password {
   width: 426px;
-  height: 38px;
+  height: 48px;
   background: rgba(255, 255, 255, 1);
-  top: 20px;
+  top: 30px;
   padding: 9px 12px;
   opacity: 1;
   position: relative;
@@ -95,13 +101,13 @@ body {
   color: rgba(68, 68, 68, 1);
   font-family: Inter;
   font-weight: regular;
-  font-size: 13px;
+  font-size: 17px;
   border: none;
   outline: none;
 }
 
 .password-toggle {
-  position: absolute;
+  position: relative;
   top: 70%;
   right: 10px;
   transform: translateY(-50%);
@@ -113,6 +119,7 @@ body {
   flex: 1;
   color: rgba(68, 68, 68, 1);
   text-align: left;
+  font-size: 17px;
 }
 
 .password .password-icon {
@@ -123,31 +130,33 @@ body {
 }
 
 
+
 /* lưu đăng nhập */
 .remember-me {
   width: 426px;
-  height: 30px;
-  background-repeat: no-repeat;
-  margin: 5px;
+  height: 40px;
+  background-repeat: no-repeat center center;
   opacity: 1;
-  position: absolute;
-  top: 100px;
+  position: relative;
+  top: 40px;
   left: 0px;
-  overflow: hidden;
 }
 
 /* vị trí chữ lưu đăng nhập */
 .rmb-me-position {
-  width: 100px;
+  width: 150px;
+  height: 20px;
   color: rgba(30,30,30,1);
-  position: absolute;
-  top: 5px;
-  left: 26px;
+  position: relative;
+  top: 10px;
+  left: 30px;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 13px;
+  font-size: 15px;
   opacity: 1;
   text-align: left;
+  justify-content:center;
+  overflow: hidden;
 }
 
 /* checkbox lưu đn */
@@ -157,11 +166,12 @@ body {
   background: rgba(255, 254, 254);
   opacity: 1;
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 0px;
   border: 0.5px solid rgba(30,30,30,1);
   overflow: hidden;
-  appearance: none; /* Xóa giao diện mặc định của checkbox */
+  appearance: none;
+  justify-content:center;
 }
 
 
@@ -180,25 +190,23 @@ body {
 
 /* Vị trí và định dạng cho liên kết quên mật khẩu */
 .forgot-password {
-  width: 120px; /* Chiều rộng của khu vực chứa */
+  width: 150px; /* Chiều rộng của khu vực chứa */
   height: 20px; /* Chiều cao của khu vực chứa */
-  background: url("../images/v6_680.png"); /* Hình nền */
-  background-repeat: no-repeat; /* Không lặp lại hình nền */
-  background-position: center center; /* Căn giữa hình nền */
-  background-size: cover; /* Kích thước hình nền phủ toàn bộ khu vực */
+  background: none; /* Hình nền */
   opacity: 1; /* Độ mờ */
-  position: absolute; /* Vị trí tuyệt đối */
-  top: 5px; /* Khoảng cách từ trên xuống */
-  left: 310px; /* Khoảng cách từ bên trái */
+  position:absolute; 
+  top: 10px;
+  left: 300px; /* Khoảng cách từ bên trái */
   overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
   border: none;
   color: rgba(23, 22, 22, 1); /* Màu chữ */
   font-family: Inter; /* Font chữ */
   font-weight: Regular; /* Độ dày chữ */
-  font-size: 13px; /* Kích thước chữ */
+  font-size: 15px; /* Kích thước chữ */
   text-align: left; /* Căn chỉnh chữ bên phải */
   line-height: 20px; /* Để căn chỉnh chiều cao của chữ */
   text-decoration: underline;
+  justify-content: center;
 }
 
 
@@ -206,11 +214,12 @@ body {
 .v6_684 {
   width: 426px;
   height: 60px;
-  background: rgba(30,30,30,1);
+  background: rgba(30,30,30,1) no-repeat center center;
+  background-size: cover;
   padding: 22px 167px;
   opacity: 1;
-  position: absolute;
-  top: 143px;
+  position: relative;
+  top: 70px;
   left: 0px;
   overflow: hidden;
 }
@@ -220,12 +229,13 @@ body {
   width: 113px;
   color: rgba(255,249,249,0.9900000095367432);
   position: absolute;
-  top: 22px;
+  top: 20px;
   left: 157px;
   font-family: Inter;
   font-weight: Bold;
-  font-size: 13px;
+  font-size: 16px;
   opacity: 1;
+  justify-items: center;
   text-align: center;
 }
 
@@ -235,17 +245,19 @@ body {
 .v11_11 {
   width: 426px;
   height: 50px;
-  background: rgb(245, 245, 245);
+  background: rgb(245, 245, 245) no-repeat center center;
   opacity: 1;
-  position: absolute;
-  top: 219px;
+  padding: 18px;
+  position: relative;
+  top: 70px;
   left: 0px;
   overflow: hidden;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 14px;
+  font-size: 16px;
   opacity: 1;
   text-align: center;
+  justify-content: center;
 }
 
 
@@ -253,17 +265,18 @@ body {
   width: 426px;
   height: 60px;
   background: rgba(255,255,255,1);
-  padding: 22px 167px;
+  padding: 22px 175px;
   opacity: 1;
-  position: absolute;
-  top: 255px;
+  position: relative;
+  top: 100px;
   left: 0px;
   overflow: hidden;
   font-family: Inter;
   font-weight: Bold;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 1);
+  justify-items: center;
 }
 
 
