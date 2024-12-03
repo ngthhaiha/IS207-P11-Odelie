@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  @include('admin.users.head')
-
+  @include('admin.head')
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ asset('css/login.css') }}"> 
 </head>
 
 <body>
@@ -11,8 +12,8 @@
     <div class="login-form">
       <div class="input-info-login">
         <div class="v6_634">ĐĂNG NHẬP</div>
-        @include('admin.users.alert')
-        <form action="{{ route('admin.users.login.store') }}" method="post">
+        @include('admin.alert')
+        <form action="{{ route('postLogin') }}" method="post">
           @csrf
             <input type="email" name="email" class="email" placeholder="Số điện thoại/Email" required autocomplete="on">
             <input type="password" name="password" class="password" placeholder="Mật khẩu" required>
@@ -29,7 +30,7 @@
     </div>
   </div>
 </div>
-  @include('admin.users.footer')
+  @include('admin.footer')
 </body>
 
 </html>
