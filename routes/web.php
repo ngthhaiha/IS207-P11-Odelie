@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\checkAdmin;
 use App\Http\Middleware\checkUser;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\PaymentController;
+
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
+Route::post('/payment/process', [PaymentController::class, 'process'])->name('payment.process');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
