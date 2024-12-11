@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->integer('parent_id');
-            $table->string('slug', 255)->unique();
             $table->boolean('isActive')->default(1); 
             $table->timestamps();
         });

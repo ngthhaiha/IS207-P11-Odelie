@@ -2,6 +2,7 @@
 
 @section('head')
     <script src="/ckeditor/ckeditor.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 @section('content')
@@ -24,18 +25,7 @@
             </div>
 
             <div class="form-group">
-                <label>Mô Tả </label>
-                <textarea name="description" class="form-control"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Mô Tả Chi Tiết</label>
-                <textarea name="content" id="content" class="form-control"></textarea>
-            </div>
-
-
-            <div class="form-group">
-                <label>Kích Hoạt</label>
+                <label>Active</label>
                 <div class="custom-control custom-radio">
                     <input class="custom-control-input" value="1" type="radio" id="active" name="active" checked="">
                     <label for="active" class="custom-control-label">Có</label>

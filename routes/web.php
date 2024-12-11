@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\checkAdmin;
 use App\Http\Middleware\checkUser;
 use App\Http\Controllers\User\HomeController;
+use App\Models\Category;
+
 use App\Http\Controllers\PaymentController;
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
@@ -39,6 +41,13 @@ Route::middleware(['auth'])->group(function () {
         #Category
         Route::prefix('category')->group(function(){
             Route::get('add', [CategoryController::class, 'create']);
+            Route::post('add', [CategoryController::class, 'store']);
+            Route::get('edit/{category}', [CategoryController::class, 'show']);
+            Route::post('edit/{category}', [CategoryController::class, 'update']);
+            Route::get('list', [CategoryController::class, 'index']);
+            
+            Route::post('delete', [CategoryController::class, 'delete']);
+
         });
     });
     
