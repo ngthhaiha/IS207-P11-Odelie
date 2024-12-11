@@ -49,6 +49,11 @@ Route::middleware(['auth'])->group(function () {
             Route::post('delete', [CategoryController::class, 'delete']);
 
         });
+
+        Route::prefix('products')->group(function(){
+            
+
+        });
     });
     
     // User Routes

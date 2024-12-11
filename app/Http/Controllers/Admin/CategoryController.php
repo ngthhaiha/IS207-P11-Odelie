@@ -45,17 +45,11 @@ class CategoryController extends Controller
         ]);
     }
 
+    public function update(Category $category, CreateFormRequest $request)
+    {
+        $this->categoryService->update($request, $category);
 
-    public function update(Category $category, CreateFormRequest $request){
-        $data = $request->validated();
-
-        $category->update([
-            'name' => $data['name'],
-            'parent_id' => $data['parent_id'],
-            'isActive' => $data['active']
-        ]);
-
-        return redirect('/admin/category/list')->with('success', 'Cập nhật danh mục thành công');
+        return redirect('/admin/category/list');
     }
 
 
