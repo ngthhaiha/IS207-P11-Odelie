@@ -11,11 +11,13 @@ use App\Http\Middleware\checkAdmin;
 use App\Http\Middleware\checkUser;
 use App\Http\Controllers\User\HomeController;
 use App\Models\Category;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UploadController;
+
 use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\Admin\InventoryController;
 use App\Http\Controllers\PaymentController;
-
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 Route::post('/payment/process', [PaymentController::class, 'process'])->name('payment.process');
@@ -51,8 +53,8 @@ Route::middleware(['auth'])->group(function () {
             Route::post('add', [CategoryController::class, 'store']);
             Route::get('edit/{category}', [CategoryController::class, 'show']);
             Route::post('edit/{category}', [CategoryController::class, 'update']);
-            Route::get('list', [CategoryController::class, 'index']);            
-            Route::post('delete', [CategoryController::class, 'delete']);
+            Route::get('list', [CategoryController::class, 'index']);
+            Route::delete('destroy', [CategoryController::class, 'destroy']);
 
         });
         # Inventory Management
@@ -65,9 +67,17 @@ Route::middleware(['auth'])->group(function () {
 
 
         Route::prefix('products')->group(function(){
-            
+            Route::get('add', [ProductController::class, 'create']);
+            Route::post('add', [ProductController::class, 'store']);
+            Route::get('edit/{product}', [ProductController::class, 'show']);
+            Route::post('edit/{product}', [ProductController::class, 'update']);
+            Route::get('list', [ProductController::class, 'index']);
+            Route::delete('destroy', [ProductController::class, 'destroy']);
 
         });
+
+        #Upload
+        Route::post('upload/services', [UploadController::class, 'store']);
     });
     
     // User Routes

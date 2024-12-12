@@ -5,25 +5,49 @@ $.ajaxSetup({
 });
 
 function removeRow(id, url) {
-    if (confirm('Bạn có chắc chắn muốn xóa không?')) {
+    if (confirm('Xóa mà không thể khôi phục. Bạn có chắc ?')) {
         $.ajax({
-            type: 'POST',
+            type: 'DELETE',
+            datatype: 'JSON',
+            data: { id },
             url: url,
-            data: {
-                id: id,
-                _token: '{{ csrf_token() }}'
-            },
             success: function (result) {
                 if (result.error === false) {
                     alert(result.message);
-                    $('#category-' + id).remove();
+                    location.reload();
                 } else {
-                    alert('Có lỗi xảy ra. Vui lòng thử lại.');
+                    alert('Xóa lỗi vui lòng thử lại');
                 }
             }
-        });
+        })
     }
 }
+
+
+/*Upload File */
+$('#upload').change(function () {
+    const form = new FormData();
+    form.append('file', $(this)[0].files[0]);
+
+    $.ajax({
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        dataType: 'JSON',
+        data: form,
+        url: '/admin/upload/services',
+        success: function (results) {
+            if (results.error === false) {
+                $('#image_show').html('<a href="' + results.url + '" target="_blank">' +
+                    '<img src="' + results.url + '" width="100px"></a>');
+
+                $('#thumb').val(results.url);
+            } else {
+                alert('Upload File Lỗi');
+            }
+        }
+    });
+});
 
 
 

@@ -11,18 +11,18 @@ class Product extends Model
 
     protected $fillable = [
         'name',
-        'price',
         'description',
         'category_id',
-        'image_url',
+        'price',
+        'thumb',
         'stock',
-        'created_at'
+        'isActive'
     ];
 
-    // Quan hệ với Category
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasOne(Category::class, 'id', 'category_id')
+            ->withDefault(['name' => '']);
     }
 
     // Quan hệ với Inventory

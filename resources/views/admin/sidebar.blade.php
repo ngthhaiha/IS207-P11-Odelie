@@ -68,13 +68,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/admin/products/add" class="nav-link">
+                            <a href="{{ url('admin/products/add') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm Sản Phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/products/list" class="nav-link">
+                            <a href="{{ url('admin/products/list') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh Sách Sản Phẩm</p>
                             </a>
