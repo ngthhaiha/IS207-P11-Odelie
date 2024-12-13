@@ -4,7 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\Wishlist\WishlistService;
-use App\Models\Wishlist;
+use App\Http\Requests\WishlistRequest; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,7 +30,7 @@ class WishlistController extends Controller
     }
 
     // Thêm sản phẩm vào danh sách yêu thích
-    public function add(Request $request)
+    public function add(WishlistRequest $request) // Sử dụng WishlistRequest để xác thực
     {
         $user = Auth::user();
         $this->wishlistService->addToWishlist($user->id, $request->product_id);

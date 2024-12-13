@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Services\Inventory\InventoryService;
+use App\Http\Services\Inventory\InventoryAdminService; // Sử dụng InventoryAdminService
 use App\Models\Inventory;
 use Illuminate\Http\Request;
 
@@ -11,8 +11,8 @@ class InventoryController extends Controller
 {
     protected $inventoryService;
 
-    // Constructor nhận dependency InventoryService
-    public function __construct(InventoryService $inventoryService)
+    // Constructor nhận dependency InventoryAdminService
+    public function __construct(InventoryAdminService $inventoryService)
     {
         $this->inventoryService = $inventoryService;
     }
@@ -36,9 +36,9 @@ class InventoryController extends Controller
     }
 
     // Lưu thông tin kho hàng
-    public function store(Request $request)
+    public function store(InventoryRequest $request) // Sử dụng InventoryRequest để xác thực
     {
-        $this->inventoryService->addInventory($request);
+        $this->inventoryService->addInventory($request); // Xử lý thêm kho hàng qua service
         
         return redirect()->route('inventory.index');
     }
@@ -53,9 +53,9 @@ class InventoryController extends Controller
     }
 
     // Cập nhật thông tin kho hàng
-    public function update(Inventory $inventory, Request $request)
+    public function update(InventoryRequest $request, Inventory $inventory) // Sử dụng InventoryRequest để xác thực
     {
-        $this->inventoryService->updateInventory($inventory, $request);
+        $this->inventoryService->updateInventory($inventory, $request); // Cập nhật kho hàng qua service
 
         return redirect()->route('inventory.index');
     }
@@ -63,7 +63,7 @@ class InventoryController extends Controller
     // Xóa thông tin kho hàng
     public function destroy(Request $request)
     {
-        $this->inventoryService->deleteInventory($request->id);
+        $this->inventoryService->deleteInventory($request->id); // Xử lý xóa kho hàng qua service
 
         return redirect()->route('inventory.index');
     }

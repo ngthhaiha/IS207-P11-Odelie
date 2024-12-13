@@ -11,16 +11,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id('ProductID');
-            $table->unsignedBigInteger('CategoryID');
-            $table->string('Name', 200);
-            $table->text('Description')->nullable();
-            $table->decimal('Price', 10, 2);
-            $table->string('ImageURL')->nullable();
-            $table->boolean('IsActive')->default(1);
-            $table->timestamps();
+            $table->bigIncrements('ProductID'); // Sử dụng bigIncrements cho primary key
+            $table->unsignedBigInteger('CategoryID'); // Đảm bảo khóa ngoại được định nghĩa đúng kiểu
+            $table->string('Name', 200); // Giới hạn độ dài chuỗi
+            $table->text('Description')->nullable(); // Cho phép null nếu không có mô tả
+            $table->decimal('Price', 10, 2); // Giá sản phẩm với định dạng số thực
+            $table->string('ImageURL')->nullable(); // Cho phép null nếu không có ảnh
+            $table->boolean('IsActive')->default(true); // Sử dụng `true` thay vì `1` cho boolean
+            $table->timestamps(); // Thêm các cột `created_at` và `updated_at`
 
-            $table->foreign('CategoryID')->references('CategoryID')->on('categories');
+            // Định nghĩa khóa ngoại
+            $table->foreign('CategoryID')
+                  ->references('CategoryID') // Khóa chính của bảng categories
+                  ->on('categories')
+                  ->onDelete('cascade'); // Khi xóa danh mục, các sản phẩm liên quan cũng sẽ bị xóa
         });
     }
 
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('products'); // Xóa bảng products nếu tồn tại
     }
 };

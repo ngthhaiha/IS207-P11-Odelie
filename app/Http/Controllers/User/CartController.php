@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Services\Cart\CartService;
 use App\Models\Cart;
 use App\Models\CartItem;
+use App\Http\Requests\CartRequest; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,7 +32,7 @@ class CartController extends Controller
     }
 
     // Thêm sản phẩm vào giỏ hàng
-    public function add(Request $request)
+    public function add(CartRequest $request) // Sử dụng CartRequest để xác thực
     {
         $user = Auth::user();
         $this->cartService->addToCart($user->id, $request->product_id, $request->quantity);
@@ -40,7 +41,7 @@ class CartController extends Controller
     }
 
     // Cập nhật số lượng sản phẩm trong giỏ hàng
-    public function update(Request $request, $cartItemId)
+    public function update(CartRequest $request, $cartItemId) // Sử dụng CartRequest để xác thực
     {
         $this->cartService->updateQuantity($cartItemId, $request->quantity);
 
